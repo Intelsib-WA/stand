@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовый стенд для скрипта подмены номеров и почт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 40px 0;
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+        }
+        .test-section h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .test-case {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .note {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            vertical-align: middle;
+            background: #4CAF50;
+            border-radius: 50%;
+        }
+        .contact-block {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+        .phone-icon::before {
+            content: "📞";
+            margin-right: 5px;
+        }
+        .email-icon::before {
+            content: "✉️";
+            margin-right: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="podmena_fresh.js"></script>
+</head>
+<body>
+    <h1>Тестовый стенд для скрипта подмены номеров и почт</h1>
+    
+    <div class="note">
+        <strong>Цель:</strong> Протестировать универсальный скрипт для статической замены номеров телефонов и email-адресов на российских сайтах.
+    </div>
+
+    <!-- Секция: Телефоны в ссылках -->
+    <div class="test-section">
+        <h2>1. Телефоны в ссылках &lt;a href="tel:"&gt;</h2>
+        
+        <div class="test-case">
+            <h3>Простая ссылка</h3>
+            <p>Позвоните нам: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>С иконкой внутри ссылки</h3>
+            <p><a href="tel:+78005553535"><span class="icon"></span>8 (800) 555-35-35</a></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Разные форматы номеров в href и тексте</h3>
+            <p><a href="tel:+79161234567">8 (916) 123-45-67</a></p>
+            <p><a href="tel:84952223344">(495) 222-33-44</a></p>
+            <p><a href="tel:+73431234567">+7 (343) 123-45-67</a></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Сложная вёрстка внутри ссылки</h3>
+            <p>
+                <a href="tel:+74959998877" style="text-decoration: none; color: #000;">
+                    <span class="phone-icon"></span>
+                    <span style="font-weight: bold;">Наш телефон:</span>
+                    <span style="color: #4CAF50;">+7 (495) 999-88-77</span>
+                    <span style="font-size: 12px;">(круглосуточно)</span>
+                </a>
+            </p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Несколько телефонов в одной строке</h3>
+            <p>
+                Телефоны: 
+                <a href="tel:+74951112233">+7 (495) 111-22-33</a>, 
+                <a href="tel:+74954445566">+7 (495) 444-55-66</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Секция: Email в ссылках -->
+    <div class="test-section">
+        <h2>2. Email в ссылках &lt;a href="mailto:"&gt;</h2>
+        
+        <div class="test-case">
+            <h3>Простая почта</h3>
+            <p>Email: <a href="mailto:info@example.ru">info@example.ru</a></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>С иконкой внутри ссылки</h3>
+            <p><a href="mailto:support@company.ru"><span class="icon"></span>support@company.ru</a></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Разные форматы email</h3>
+            <p><a href="mailto:sales.department@mycompany.ru">sales.department@mycompany.ru</a></p>
+            <p><a href="mailto:ivanov_ivan@domain.ru">ivanov_ivan@domain.ru</a></p>
+            <p><a href="mailto:почта@кириллица.рф">почта@кириллица.рф</a></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Сложная вёрстка внутри ссылки</h3>
+            <p>
+                <a href="mailto:contact@site.ru" style="color: #2196F3;">
+                    <span class="email-icon"></span>
+                    <strong>Напишите нам:</strong>
+                    <span style="text-decoration: underline;">contact@site.ru</span>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Секция: Телефоны в тексте (без ссылок) -->
+    <div class="test-section">
+        <h2>3. Телефоны в тексте (без ссылок)</h2>
+        
+        <div class="test-case">
+            <h3>Простые номера</h3>
+            <p>Наш офис: +7 (495) 765-43-21</p>
+            <p>Техподдержка: 8-800-100-50-50</p>
+            <p>Мобильный: 8(916)123-45-67</p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Внутри других тегов</h3>
+            <div>
+                <span>Телефон отдела продаж:</span>
+                <strong>+7 (343) 222-33-44</strong>
+                <small>(доб. 123)</small>
+            </div>
+            <p>Факс: <span style="color: #666;">(495) 999-88-77</span></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Несколько номеров в тексте</h3>
+            <p>
+                Контакты: Москва: +7 (495) 111-22-33, 
+                Санкт-Петербург: +7 (812) 444-55-66, 
+                Екатеринбург: +7 (343) 777-88-99.
+            </p>
+        </div>
+        
+        <div class="test-case">
+            <h3>В таблице</h3>
+            <table border="1" cellpadding="5">
+                <tr>
+                    <th>Отдел</th>
+                    <th>Телефон</th>
+                </tr>
+                <tr>
+                    <td>Отдел продаж</td>
+                    <td>8 (495) 123-45-67</td>
+                </tr>
+                <tr>
+                    <td>Бухгалтерия</td>
+                    <td>+7 495 987-65-43</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Секция: Email в тексте (без ссылок) -->
+    <div class="test-section">
+        <h2>4. Email в тексте (без ссылок)</h2>
+        
+        <div class="test-case">
+            <h3>Простые email</h3>
+            <p>Электронная почта: admin@domain.ru</p>
+            <p>Для резюме: hr@company.ru</p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Внутри других тегов</h3>
+            <div>
+                <span>Технические вопросы:</span>
+                <code>tech-support@server.ru</code>
+            </div>
+            <p>Реклама: <mark>ads@portal.ru</mark></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Несколько email в тексте</h3>
+            <p>
+                Контакты: общие вопросы - info@firma.ru, 
+                закупки - purchase@firma.ru, 
+                дирекция - director@firma.ru.
+            </p>
+        </div>
+    </div>
+
+    <!-- Секция: Смешанные сложные блоки -->
+    <div class="test-section">
+        <h2>5. Сложные блоки контактов (смешанные)</h2>
+        
+        <div class="test-case">
+            <h3>Блок контактов в footer</h3>
+            <footer style="background: #f5f5f5; padding: 20px; margin-top: 20px;">
+                <div class="contact-block">
+                    <div>
+                        <strong>Телефоны:</strong><br>
+                        <a href="tel:+74951112233">+7 (495) 111-22-33</a><br>
+                        <a href="tel:+78001002030">8 (800) 100-20-30</a>
+                    </div>
+                    <div>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:info@site.ru">info@site.ru</a><br>
+                        <a href="mailto:support@site.ru">support@site.ru</a>
+                    </div>
+                    <div>
+                        <strong>Адрес:</strong><br>
+                        Москва, ул. Примерная, д. 1
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <div class="test-case">
+            <h3>Карточка сотрудника</h3>
+            <div style="border: 1px solid #ddd; padding: 15px; max-width: 300px;">
+                <h4 style="margin-top: 0;">Иванов Иван</h4>
+                <p>Менеджер по продажам</p>
+                <p>Тел.: <a href="tel:+79161234567">8 (916) 123-45-67</a></p>
+                <p>Email: <a href="mailto:i.ivanov@company.ru">i.ivanov@company.ru</a></p>
+                <p>Рабочий: +7 (495) 765-43-21 (доб. 123)</p>
+            </div>
+        </div>
+        
+        <div class="test-case">
+            <h3>Контактная форма (с телефонами рядом)</h3>
+            <div style="display: flex; gap: 30px;">
+                <div style="flex: 1;">
+                    <h4>Форма обратной связи</h4>
+                    <!-- Здесь могла бы быть форма -->
+                </div>
+                <div style="flex: 1;">
+                    <h4>Контакты</h4>
+                    <p><strong>Телефон:</strong> <a href="tel:+74952223344">+7 (495) 222-33-44</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@firma.ru">contact@firma.ru</a></p>
+                    <p><strong>Факс:</strong> (495) 555-66-77</p>
+                    <p><strong>Для партнеров:</strong> partner@firma.ru</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Секция: Особые случаи -->
+    <div class="test-section">
+        <h2>6. Особые и сложные случаи</h2>
+        
+        <div class="test-case">
+            <h3>Номера без скобок и дефисов</h3>
+            <p>Телефон: 84951234567</p>
+            <p>Мобильный: 89161234567</p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Номера с добавочными</h3>
+            <p><a href="tel:+74951112233">+7 (495) 111-22-33 доб. 456</a></p>
+            <p>+7 (812) 333-44-55 (доб. 123, 124)</p>
+            <p>8 (800) 100-50-50 (вн. 789)</p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Email с пробелами вокруг @ (типичная ошибка)</h3>
+            <p>Email: info @ example.ru</p>
+            <p>support @ company . ru</p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Data-атрибуты (могут мешать)</h3>
+            <p><a href="tel:+74959991122" data-id="123" data-phone="true">+7 (495) 999-11-22</a></p>
+            <p><span data-contact="email" data-role="support">support@mail.ru</span></p>
+        </div>
+        
+        <div class="test-case">
+            <h3>Динамически добавленный контент (для тестирования)</h3>
+            <div id="dynamic-content"></div>
+            <button onclick="addDynamicContent()">Добавить динамический контент</button>
+        </div>
+    </div>
+
+    <div class="note">
+        <strong>Примечания для тестирования:</strong>
+        <ul>
+            <li>Скрипт должен обрабатывать как ссылки (tel:/mailto:), так и обычный текст</li>
+            <li>Учитывать разные форматы номеров: +7 (XXX) XXX-XX-XX, 8 (XXX) XXX-XX-XX, без скобок и дефисов</li>
+            <li>Обрабатывать кириллические домены (.рф)</li>
+            <li>Не трогать номера в JS-коде, атрибутах data-*, комментариях</li>
+            <li>Корректно работать с динамически добавленным контентом</li>
+        </ul>
+    </div>
+
+    <script>
+        // Функция для добавления динамического контента (для тестирования)
+        function addDynamicContent() {
+            const div = document.getElementById('dynamic-content');
+            div.innerHTML = `
+                <div class="test-case">
+                    <h4>Динамически добавленные контакты:</h4>
+                    <p>Добавленный телефон: <a href="tel:+74957778899">+7 (495) 777-88-99</a></p>
+                    <p>Добавленный email: <a href="mailto:dynamix@test.ru">dynamix@test.ru</a></p>
+                    <p>Текст с номером: 8 (916) 999-88-77</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
