@@ -34,14 +34,6 @@
             border-radius: 5px;
         }
 
-        .note {
-            background: #fff3cd;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-            border-left: 4px solid #ffc107;
-        }
-
         .icon {
             display: inline-block;
             width: 16px;
@@ -103,12 +95,6 @@
 <body>
     <h1>Тестовый стенд для скрипта подмены номеров и почт</h1>
 
-    <div class="note">
-        <strong>Цель:</strong> Протестировать универсальный скрипт для статической замены номеров телефонов и
-        email-адресов на российских сайтах.
-    </div>
-
-    <!-- Секция: Телефоны в ссылках -->
     <div class="test-section">
         <h2>1. Телефоны в ссылках &lt;a href="tel:"&gt;</h2>
 
@@ -351,17 +337,6 @@
             <div id="dynamic-content"></div>
             <button onclick="addDynamicContent()">Добавить динамический контент</button>
         </div>
-    </div>
-
-    <div class="note">
-        <strong>Примечания для тестирования:</strong>
-        <ul>
-            <li>Скрипт должен обрабатывать как ссылки (tel:/mailto:), так и обычный текст</li>
-            <li>Учитывать разные форматы номеров: +7 (XXX) XXX-XX-XX, 8 (XXX) XXX-XX-XX, без скобок и дефисов</li>
-            <li>Обрабатывать кириллические домены (.рф)</li>
-            <li>Не трогать номера в JS-коде, атрибутах data-*, комментариях</li>
-            <li>Корректно работать с динамически добавленным контентом</li>
-        </ul>
     </div>
 
     <script>
