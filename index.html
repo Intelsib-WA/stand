@@ -63,7 +63,6 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--<script src="podmena_fresh.js"></script>-->
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -95,33 +94,34 @@
 <body>
     <h1>Тестовый стенд для скрипта подмены номеров и почт</h1>
 
+    <!-- Секция: Телефоны в ссылках -->
     <div class="test-section">
         <h2>1. Телефоны в ссылках &lt;a href="tel:"&gt;</h2>
 
         <div class="test-case">
             <h3>Простая ссылка</h3>
-            <p>Позвоните нам: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+            <p>Позвоните нам: <a href="tel:89111111111">8 (911) 111-11-11</a></p>
         </div>
 
         <div class="test-case">
             <h3>С иконкой внутри ссылки</h3>
-            <p><a href="tel:+78005553535"><span class="icon"></span>8 (800) 555-35-35</a></p>
+            <p><a href="tel:89111111111"><span class="icon"></span>8 (911) 111-11-11</a></p>
         </div>
 
         <div class="test-case">
             <h3>Разные форматы номеров в href и тексте</h3>
-            <p><a href="tel:+79161234567">8 (916) 123-45-67</a></p>
-            <p><a href="tel:84952223344">(495) 222-33-44</a></p>
-            <p><a href="tel:+73431234567">+7 (343) 123-45-67</a></p>
+            <p><a href="tel:89111111111">8 (911) 111-11-11</a></p>
+            <p><a href="tel:89111111111">8 (911) 111-11-11</a></p>
+            <p><a href="tel:89111111111">8 (911) 111-11-11</a></p>
         </div>
 
         <div class="test-case">
             <h3>Сложная вёрстка внутри ссылки</h3>
             <p>
-                <a href="tel:+74959998877" style="text-decoration: none; color: #000;">
+                <a href="tel:89111111111" style="text-decoration: none; color: #000;">
                     <span class="phone-icon"></span>
                     <span style="font-weight: bold;">Наш телефон:</span>
-                    <span style="color: #4CAF50;">+7 (495) 999-88-77</span>
+                    <span style="color: #4CAF50;">8 (911) 111-11-11</span>
                     <span style="font-size: 12px;">(круглосуточно)</span>
                 </a>
             </p>
@@ -131,8 +131,8 @@
             <h3>Несколько телефонов в одной строке</h3>
             <p>
                 Телефоны:
-                <a href="tel:+74951112233">+7 (495) 111-22-33</a>,
-                <a href="tel:+74954445566">+7 (495) 444-55-66</a>
+                <a href="tel:89111111111">8 (911) 111-11-11</a>,
+                <a href="tel:89111111111">8 (911) 111-11-11</a>
             </p>
         </div>
     </div>
@@ -143,28 +143,28 @@
 
         <div class="test-case">
             <h3>Простая почта</h3>
-            <p>Email: <a href="mailto:info@example.ru">info@example.ru</a></p>
+            <p>Email: <a href="mailto:example@newdomain.ru">example@newdomain.ru</a></p>
         </div>
 
         <div class="test-case">
             <h3>С иконкой внутри ссылки</h3>
-            <p><a href="mailto:support@company.ru"><span class="icon"></span>support@company.ru</a></p>
+            <p><a href="mailto:example@newdomain.ru"><span class="icon"></span>example@newdomain.ru</a></p>
         </div>
 
         <div class="test-case">
             <h3>Разные форматы email</h3>
-            <p><a href="mailto:sales.department@mycompany.ru">sales.department@mycompany.ru</a></p>
-            <p><a href="mailto:ivanov_ivan@domain.ru">ivanov_ivan@domain.ru</a></p>
-            <p><a href="mailto:почта@кириллица.рф">почта@кириллица.рф</a></p>
+            <p><a href="mailto:example@newdomain.ru">example@newdomain.ru</a></p>
+            <p><a href="mailto:example@newdomain.ru">example@newdomain.ru</a></p>
+            <p><a href="mailto:example@newdomain.ru">example@newdomain.ru</a></p>
         </div>
 
         <div class="test-case">
             <h3>Сложная вёрстка внутри ссылки</h3>
             <p>
-                <a href="mailto:contact@site.ru" style="color: #2196F3;">
+                <a href="mailto:example@newdomain.ru" style="color: #2196F3;">
                     <span class="email-icon"></span>
                     <strong>Напишите нам:</strong>
-                    <span style="text-decoration: underline;">contact@site.ru</span>
+                    <span style="text-decoration: underline;">example@newdomain.ru</span>
                 </a>
             </p>
         </div>
@@ -176,27 +176,27 @@
 
         <div class="test-case">
             <h3>Простые номера</h3>
-            <p>Наш офис: +7 (495) 765-43-21</p>
-            <p>Техподдержка: 8-800-100-50-50</p>
-            <p>Мобильный: 8(916)123-45-67</p>
+            <p>Наш офис: 8 (911) 111-11-11</p>
+            <p>Техподдержка: 8-911-111-11-11</p>
+            <p>Мобильный: 8(911)111-11-11</p>
         </div>
 
         <div class="test-case">
             <h3>Внутри других тегов</h3>
             <div>
                 <span>Телефон отдела продаж:</span>
-                <strong>+7 (343) 222-33-44</strong>
+                <strong>8 (911) 111-11-11</strong>
                 <small>(доб. 123)</small>
             </div>
-            <p>Факс: <span style="color: #666;">(495) 999-88-77</span></p>
+            <p>Факс: <span style="color: #666;">8 (911) 111-11-11</span></p>
         </div>
 
         <div class="test-case">
             <h3>Несколько номеров в тексте</h3>
             <p>
-                Контакты: Москва: +7 (495) 111-22-33,
-                Санкт-Петербург: +7 (812) 444-55-66,
-                Екатеринбург: +7 (343) 777-88-99.
+                Контакты: Москва: 8 (911) 111-11-11,
+                Санкт-Петербург: 8 (911) 111-11-11,
+                Екатеринбург: 8 (911) 111-11-11.
             </p>
         </div>
 
@@ -209,11 +209,11 @@
                 </tr>
                 <tr>
                     <td>Отдел продаж</td>
-                    <td>8 (495) 123-45-67</td>
+                    <td>8 (911) 111-11-11</td>
                 </tr>
                 <tr>
                     <td>Бухгалтерия</td>
-                    <td>+7 495 987-65-43</td>
+                    <td>8 (911) 111-11-11</td>
                 </tr>
             </table>
         </div>
@@ -225,25 +225,25 @@
 
         <div class="test-case">
             <h3>Простые email</h3>
-            <p>Электронная почта: admin@domain.ru</p>
-            <p>Для резюме: hr@company.ru</p>
+            <p>Электронная почта: example@newdomain.ru</p>
+            <p>Для резюме: example@newdomain.ru</p>
         </div>
 
         <div class="test-case">
             <h3>Внутри других тегов</h3>
             <div>
                 <span>Технические вопросы:</span>
-                <code>tech-support@server.ru</code>
+                <code>example@newdomain.ru</code>
             </div>
-            <p>Реклама: <mark>ads@portal.ru</mark></p>
+            <p>Реклама: <mark>example@newdomain.ru</mark></p>
         </div>
 
         <div class="test-case">
             <h3>Несколько email в тексте</h3>
             <p>
-                Контакты: общие вопросы - info@firma.ru,
-                закупки - purchase@firma.ru,
-                дирекция - director@firma.ru.
+                Контакты: общие вопросы - example@newdomain.ru,
+                закупки - example@newdomain.ru,
+                дирекция - example@newdomain.ru.
             </p>
         </div>
     </div>
@@ -258,13 +258,13 @@
                 <div class="contact-block">
                     <div>
                         <strong>Телефоны:</strong><br>
-                        <a href="tel:+74951112233">+7 (495) 111-22-33</a><br>
-                        <a href="tel:+78001002030">8 (800) 100-20-30</a>
+                        <a href="tel:89111111111">8 (911) 111-11-11</a><br>
+                        <a href="tel:89111111111">8-911-111-11-11</a>
                     </div>
                     <div>
                         <strong>Email:</strong><br>
-                        <a href="mailto:info@site.ru">info@site.ru</a><br>
-                        <a href="mailto:support@site.ru">support@site.ru</a>
+                        <a href="mailto:example@newdomain.ru">example@newdomain.ru</a><br>
+                        <a href="mailto:example@newdomain.ru">example@newdomain.ru</a>
                     </div>
                     <div>
                         <strong>Адрес:</strong><br>
@@ -279,9 +279,9 @@
             <div style="border: 1px solid #ddd; padding: 15px; max-width: 300px;">
                 <h4 style="margin-top: 0;">Иванов Иван</h4>
                 <p>Менеджер по продажам</p>
-                <p>Тел.: <a href="tel:+79161234567">8 (916) 123-45-67</a></p>
-                <p>Email: <a href="mailto:i.ivanov@company.ru">i.ivanov@company.ru</a></p>
-                <p>Рабочий: +7 (495) 765-43-21 (доб. 123)</p>
+                <p>Тел.: <a href="tel:89111111111">8 (911) 111-11-11</a></p>
+                <p>Email: <a href="mailto:example@newdomain.ru">example@newdomain.ru</a></p>
+                <p>Рабочий: 8 (911) 111-11-11 (доб. 123)</p>
             </div>
         </div>
 
@@ -294,10 +294,10 @@
                 </div>
                 <div style="flex: 1;">
                     <h4>Контакты</h4>
-                    <p><strong>Телефон:</strong> <a href="tel:+74952223344">+7 (495) 222-33-44</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:contact@firma.ru">contact@firma.ru</a></p>
-                    <p><strong>Факс:</strong> (495) 555-66-77</p>
-                    <p><strong>Для партнеров:</strong> partner@firma.ru</p>
+                    <p><strong>Телефон:</strong> <a href="tel:89111111111">8 (911) 111-11-11</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:example@newdomain.ru">example@newdomain.ru</a></p>
+                    <p><strong>Факс:</strong> 8 (911) 111-11-11</p>
+                    <p><strong>Для партнеров:</strong> example@newdomain.ru</p>
                 </div>
             </div>
         </div>
@@ -309,27 +309,27 @@
 
         <div class="test-case">
             <h3>Номера без скобок и дефисов</h3>
-            <p>Телефон: 84951234567</p>
-            <p>Мобильный: 89161234567</p>
+            <p>Телефон: 89111111111</p>
+            <p>Мобильный: 89111111111</p>
         </div>
 
         <div class="test-case">
             <h3>Номера с добавочными</h3>
-            <p><a href="tel:+74951112233">+7 (495) 111-22-33 доб. 456</a></p>
-            <p>+7 (812) 333-44-55 (доб. 123, 124)</p>
-            <p>8 (800) 100-50-50 (вн. 789)</p>
+            <p><a href="tel:89111111111">8 (911) 111-11-11 доб. 456</a></p>
+            <p>8 (911) 111-11-11 (доб. 123, 124)</p>
+            <p>8 (911) 111-11-11 (вн. 789)</p>
         </div>
 
         <div class="test-case">
             <h3>Email с пробелами вокруг @ (типичная ошибка)</h3>
-            <p>Email: info @ example.ru</p>
-            <p>support @ company . ru</p>
+            <p>Email: example @ newdomain.ru</p>
+            <p>example @ newdomain . ru</p>
         </div>
 
         <div class="test-case">
             <h3>Data-атрибуты (могут мешать)</h3>
-            <p><a href="tel:+74959991122" data-id="123" data-phone="true">+7 (495) 999-11-22</a></p>
-            <p><span data-contact="email" data-role="support">support@mail.ru</span></p>
+            <p><a href="tel:89111111111" data-id="123" data-phone="true">8 (911) 111-11-11</a></p>
+            <p><span data-contact="email" data-role="support">example@newdomain.ru</span></p>
         </div>
 
         <div class="test-case">
@@ -346,9 +346,9 @@
             div.innerHTML = `
                 <div class="test-case">
                     <h4>Динамически добавленные контакты:</h4>
-                    <p>Добавленный телефон: <a href="tel:+74957778899">+7 (495) 777-88-99</a></p>
-                    <p>Добавленный email: <a href="mailto:dynamix@test.ru">dynamix@test.ru</a></p>
-                    <p>Текст с номером: 8 (916) 999-88-77</p>
+                    <p>Добавленный телефон: <a href="tel:89111111111">8 (911) 111-11-11</a></p>
+                    <p>Добавленный email: <a href="mailto:example@newdomain.ru">example@newdomain.ru</a></p>
+                    <p>Текст с номером: 8-911-111-11-11</p>
                 </div>
             `;
         }
