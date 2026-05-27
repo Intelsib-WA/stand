@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.test-section {
+    margin: 40px 0;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.test-section h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.test-case {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: #4CAF50;
+    border-radius: 50%;
+}
+
+.contact-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.phone-icon::before {
+    content: "📞";
+    margin-right: 5px;
+}
+
+.email-icon::before {
+    content: "✉️";
+    margin-right: 5px;
+}

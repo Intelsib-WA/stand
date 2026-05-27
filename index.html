@@ -4,65 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестовый стенд для скрипта подмены номеров и почт</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        .test-section {
-            margin: 40px 0;
-            padding: 20px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-        }
-
-        .test-section h2 {
-            color: #333;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-        }
-
-        .test-case {
-            margin: 15px 0;
-            padding: 10px;
-            background: #f9f9f9;
-            border-radius: 5px;
-        }
-
-        .icon {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            margin-right: 8px;
-            vertical-align: middle;
-            background: #4CAF50;
-            border-radius: 50%;
-        }
-
-        .contact-block {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin: 10px 0;
-            flex-wrap: wrap;
-        }
-
-        .phone-icon::before {
-            content: "📞";
-            margin-right: 5px;
-        }
-
-        .email-icon::before {
-            content: "✉️";
-            margin-right: 5px;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Стенд ВА</title>
+    <link rel="stylesheet" href="style.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -79,20 +22,23 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MV27XWT2');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MV27XWT2');</script>
     <!-- End Google Tag Manager -->
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV27XWT2"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV27XWT2" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 </head>
 
 <body>
-    <h1>Тестовый стенд для скрипта подмены номеров и почт</h1>
+    <h1>Стенд ВА</h1>
 
     <!-- Секция: Телефоны в ссылках -->
     <div class="test-section">
@@ -338,21 +284,6 @@
             <button onclick="addDynamicContent()">Добавить динамический контент</button>
         </div>
     </div>
-
-    <script>
-        // Функция для добавления динамического контента (для тестирования)
-        function addDynamicContent() {
-            const div = document.getElementById('dynamic-content');
-            div.innerHTML = `
-                <div class="test-case">
-                    <h4>Динамически добавленные контакты:</h4>
-                    <p>Добавленный телефон: <a href="tel:89111111111">8 (911) 111-11-11</a></p>
-                    <p>Добавленный email: <a href="mailto:original@test.ru">original@test.ru</a></p>
-                    <p>Текст с номером: 8-911-111-11-11</p>
-                </div>
-            `;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
