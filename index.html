@@ -39,26 +39,23 @@
 
 <body>
     <h1>Стенд ВА</h1>
-
-    <!-- Секция: Телефоны в ссылках -->
     <div class="test-section">
-        <h2>1. Телефоны в ссылках &lt;a href="tel:"&gt;</h2>
+        <h2>Номера</h2>
 
         <div class="test-case">
-            <h3>Простая ссылка</h3>
-            <p>Позвоните нам: <a href="tel:89111111111">8 (911) 111-11-11</a></p>
+            <h3>Разные форматы</h3>
+            <p><a href="tel:8 (911) 111-11-11">8 (911) 111-11-11</a></p>
+            <p><a href="tel:8 (911) 111 11 11">8 (911) 111 11 11</a></p>
+            <p><a href="tel:8(911)111-11-11">8(911)111-11-11</a></p>
+            <p><a href="tel:8(911)1111111">8(911)1111111</a></p>
+            <p><a href="tel:8 911 111-11-11">8 911 111-11-11</a></p>
+            <p><a href="tel:8 911 111 11 11">8 911 111 11 11</a></p>
+            <p><a href="tel:89111111111">89111111111</a></p>
         </div>
 
         <div class="test-case">
             <h3>С иконкой внутри ссылки</h3>
             <p><a href="tel:89111111111"><span class="icon"></span>8 (911) 111-11-11</a></p>
-        </div>
-
-        <div class="test-case">
-            <h3>Разные форматы номеров в href и тексте</h3>
-            <p><a href="tel:89111111111">8 (911) 111-11-11</a></p>
-            <p><a href="tel:89111111111">8 (911) 111-11-11</a></p>
-            <p><a href="tel:89111111111">8 (911) 111-11-11</a></p>
         </div>
 
         <div class="test-case">
@@ -72,20 +69,16 @@
                 </a>
             </p>
         </div>
-
         <div class="test-case">
-            <h3>Несколько телефонов в одной строке</h3>
-            <p>
-                Телефоны:
-                <a href="tel:89111111111">8 (911) 111-11-11</a>,
-                <a href="tel:89111111111">8 (911) 111-11-11</a>
-            </p>
+            <h3>Простые номера</h3>
+            <p>Наш офис: 8 (911) 111-11-11</p>
+            <p>Техподдержка: 8-911-111-11-11</p>
+            <p>Мобильный: 8(911)111-11-11</p>
         </div>
     </div>
 
-    <!-- Секция: Email в ссылках -->
     <div class="test-section">
-        <h2>2. Email в ссылках &lt;a href="mailto:"&gt;</h2>
+        <h2>Почты</h2>
 
         <div class="test-case">
             <h3>Простая почта</h3>
@@ -95,13 +88,6 @@
         <div class="test-case">
             <h3>С иконкой внутри ссылки</h3>
             <p><a href="mailto:original@test.ru"><span class="icon"></span>original@test.ru</a></p>
-        </div>
-
-        <div class="test-case">
-            <h3>Разные форматы email</h3>
-            <p><a href="mailto:original@test.ru">original@test.ru</a></p>
-            <p><a href="mailto:original@test.ru">original@test.ru</a></p>
-            <p><a href="mailto:original@test.ru">original@test.ru</a></p>
         </div>
 
         <div class="test-case">
@@ -115,171 +101,10 @@
             </p>
         </div>
     </div>
-
-    <!-- Секция: Телефоны в тексте (без ссылок) -->
+    
     <div class="test-section">
-        <h2>3. Телефоны в тексте (без ссылок)</h2>
-
+        <h2>Динамически добавляемый контент</h2>
         <div class="test-case">
-            <h3>Простые номера</h3>
-            <p>Наш офис: 8 (911) 111-11-11</p>
-            <p>Техподдержка: 8-911-111-11-11</p>
-            <p>Мобильный: 8(911)111-11-11</p>
-        </div>
-
-        <div class="test-case">
-            <h3>Внутри других тегов</h3>
-            <div>
-                <span>Телефон отдела продаж:</span>
-                <strong>8 (911) 111-11-11</strong>
-                <small>(доб. 123)</small>
-            </div>
-            <p>Факс: <span style="color: #666;">8 (911) 111-11-11</span></p>
-        </div>
-
-        <div class="test-case">
-            <h3>Несколько номеров в тексте</h3>
-            <p>
-                Контакты: Москва: 8 (911) 111-11-11,
-                Санкт-Петербург: 8 (911) 111-11-11,
-                Екатеринбург: 8 (911) 111-11-11.
-            </p>
-        </div>
-
-        <div class="test-case">
-            <h3>В таблице</h3>
-            <table border="1" cellpadding="5">
-                <tr>
-                    <th>Отдел</th>
-                    <th>Телефон</th>
-                </tr>
-                <tr>
-                    <td>Отдел продаж</td>
-                    <td>8 (911) 111-11-11</td>
-                </tr>
-                <tr>
-                    <td>Бухгалтерия</td>
-                    <td>8 (911) 111-11-11</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <!-- Секция: Email в тексте (без ссылок) -->
-    <div class="test-section">
-        <h2>4. Email в тексте (без ссылок)</h2>
-
-        <div class="test-case">
-            <h3>Простые email</h3>
-            <p>Электронная почта: original@test.ru</p>
-            <p>Для резюме: original@test.ru</p>
-        </div>
-
-        <div class="test-case">
-            <h3>Внутри других тегов</h3>
-            <div>
-                <span>Технические вопросы:</span>
-                <code>original@test.ru</code>
-            </div>
-            <p>Реклама: <mark>original@test.ru</mark></p>
-        </div>
-
-        <div class="test-case">
-            <h3>Несколько email в тексте</h3>
-            <p>
-                Контакты: общие вопросы - original@test.ru,
-                закупки - original@test.ru,
-                дирекция - original@test.ru.
-            </p>
-        </div>
-    </div>
-
-    <!-- Секция: Смешанные сложные блоки -->
-    <div class="test-section">
-        <h2>5. Сложные блоки контактов (смешанные)</h2>
-
-        <div class="test-case">
-            <h3>Блок контактов в footer</h3>
-            <footer style="background: #f5f5f5; padding: 20px; margin-top: 20px;">
-                <div class="contact-block">
-                    <div>
-                        <strong>Телефоны:</strong><br>
-                        <a href="tel:89111111111">8 (911) 111-11-11</a><br>
-                        <a href="tel:89111111111">8-911-111-11-11</a>
-                    </div>
-                    <div>
-                        <strong>Email:</strong><br>
-                        <a href="mailto:original@test.ru">original@test.ru</a><br>
-                        <a href="mailto:original@test.ru">original@test.ru</a>
-                    </div>
-                    <div>
-                        <strong>Адрес:</strong><br>
-                        Москва, ул. Примерная, д. 1
-                    </div>
-                </div>
-            </footer>
-        </div>
-
-        <div class="test-case">
-            <h3>Карточка сотрудника</h3>
-            <div style="border: 1px solid #ddd; padding: 15px; max-width: 300px;">
-                <h4 style="margin-top: 0;">Иванов Иван</h4>
-                <p>Менеджер по продажам</p>
-                <p>Тел.: <a href="tel:89111111111">8 (911) 111-11-11</a></p>
-                <p>Email: <a href="mailto:original@test.ru">original@test.ru</a></p>
-                <p>Рабочий: 8 (911) 111-11-11 (доб. 123)</p>
-            </div>
-        </div>
-
-        <div class="test-case">
-            <h3>Контактная форма (с телефонами рядом)</h3>
-            <div style="display: flex; gap: 30px;">
-                <div style="flex: 1;">
-                    <h4>Форма обратной связи</h4>
-                    <!-- Здесь могла бы быть форма -->
-                </div>
-                <div style="flex: 1;">
-                    <h4>Контакты</h4>
-                    <p><strong>Телефон:</strong> <a href="tel:89111111111">8 (911) 111-11-11</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:original@test.ru">original@test.ru</a></p>
-                    <p><strong>Факс:</strong> 8 (911) 111-11-11</p>
-                    <p><strong>Для партнеров:</strong> original@test.ru</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Секция: Особые случаи -->
-    <div class="test-section">
-        <h2>6. Особые и сложные случаи</h2>
-
-        <div class="test-case">
-            <h3>Номера без скобок и дефисов</h3>
-            <p>Телефон: 89111111111</p>
-            <p>Мобильный: 89111111111</p>
-        </div>
-
-        <div class="test-case">
-            <h3>Номера с добавочными</h3>
-            <p><a href="tel:89111111111">8 (911) 111-11-11 доб. 456</a></p>
-            <p>8 (911) 111-11-11 (доб. 123, 124)</p>
-            <p>8 (911) 111-11-11 (вн. 789)</p>
-        </div>
-
-        <div class="test-case">
-            <h3>Email с пробелами вокруг @ (типичная ошибка)</h3>
-            <p>Email: example @ newdomain.ru</p>
-            <p>example @ newdomain . ru</p>
-        </div>
-
-        <div class="test-case">
-            <h3>Data-атрибуты (могут мешать)</h3>
-            <p><a href="tel:89111111111" data-id="123" data-phone="true">8 (911) 111-11-11</a></p>
-            <p><span data-contact="email" data-role="support">original@test.ru</span></p>
-        </div>
-
-        <div class="test-case">
-            <h3>Динамически добавленный контент (для тестирования)</h3>
             <div id="dynamic-content"></div>
             <button onclick="addDynamicContent()">Добавить динамический контент</button>
         </div>
